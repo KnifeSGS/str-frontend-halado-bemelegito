@@ -1,4 +1,4 @@
-# str-frontend-kepesito-vizsga
+# str-frontend-halado-bemelegito
 "Bemelegítő" feladat
 
 ## Első lépések

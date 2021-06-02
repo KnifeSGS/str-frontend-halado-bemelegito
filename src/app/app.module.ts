@@ -7,18 +7,20 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
 import { ListComponent } from './components/list/list.component';
 import { HomeComponent } from './pages/home/home.component';
+import { RepolistComponent } from './pages/repolist/repolist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     ListComponent,
-    HomeComponent
+    HomeComponent,
+    RepolistComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

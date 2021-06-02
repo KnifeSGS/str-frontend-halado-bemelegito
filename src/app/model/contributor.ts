@@ -17,5 +17,5 @@ export class Contributor {
   received_events_url: string = "";
   type: string = "";
   site_admin: boolean = false;
-  contributions: number = 0
+  contributions?: any = 0
 }

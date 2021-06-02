@@ -1,1 +1,14 @@
-<p>home works!</p>
+<div class="container">
+  <h5>
+    Top Contributors
+  </h5>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+
+    <app-card *ngFor="let user of contributors" [avatar_url]="user.avatar_url"
+      [login]="user.login" [contributions]="user.contributions">
+    </app-card>
+
+  </div>
+
+</div>

@@ -10,7 +10,10 @@ import { ContributorsService } from 'src/app/service/contributors.service';
 })
 export class HomeComponent implements OnInit {
 
-  dataArr$: Observable<Contributor[]> = this.contribService.getContributors();
+  page: number = 1;
+  itemsPerPage: number = 25
+
+  dataArr$: Observable<Contributor[]> = this.contribService.getContributors(this.page, this.itemsPerPage);
 
   contributors: Contributor[] = []
 

@@ -8,11 +8,11 @@ import { Contributor } from '../model/contributor';
 })
 export class ContributorsService {
 
-  gitURL: string = "https://api.github.com/repos/angular/angular/contributors?page=1&per_page=25"
+  gitURL: string = "https://api.github.com/repos/angular/angular/contributors"
 
   constructor(private http: HttpClient) { }
 
-  getContributors(): Observable<Contributor[]> {
-    return this.http.get<Contributor[]>(this.gitURL);
+  getContributors(page: number = 1, items: number = 25): Observable<Contributor[]> {
+    return this.http.get<Contributor[]>(`${this.gitURL}?page=${page}&per_page=${items}`);
   }
 }

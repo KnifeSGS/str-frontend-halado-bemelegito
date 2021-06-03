@@ -8,6 +8,7 @@ import { CardComponent } from './components/card/card.component';
 import { ListComponent } from './components/list/list.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RepolistComponent } from './pages/repolist/repolist.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { RepolistComponent } from './pages/repolist/repolist.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    InfiniteScrollModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

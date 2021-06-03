@@ -11,7 +11,7 @@ import { ContributorsService } from 'src/app/service/contributors.service';
 export class HomeComponent implements OnInit {
 
   page: number = 1;
-  itemsPerPage: number = 25
+  itemsPerPage: number = 25;
 
   dataArr$: Observable<Contributor[]> = this.contribService.getContributors(this.page, this.itemsPerPage);
 
@@ -33,6 +33,18 @@ export class HomeComponent implements OnInit {
 
   showError(message: string) {
     console.log(message);
+  }
+
+  onScroll() {
+    console.log(this.itemsPerPage);
+    this.itemsPerPage += 25;
+    console.log(this.itemsPerPage);
+    this.dataArr$.subscribe(
+      contribs => {
+        this.contributors = contribs
+      },
+      error => this.showError(error)
+    )
   }
 
 }

@@ -13,6 +13,6 @@ export class RepositoriesService {
   constructor(private http: HttpClient) { }
 
   getRepos(name: string): Observable<Repos[]> {
-    return this.http.get<Repos[]>(`${this.repoUrl}/${name}/repos`);
+    return this.http.get<Repos[]>(`${this.repoUrl}/${name}/repos?sort=updated`);
   }
 }

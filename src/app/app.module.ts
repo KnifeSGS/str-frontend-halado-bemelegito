@@ -9,6 +9,7 @@ import { ListComponent } from './components/list/list.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RepolistComponent } from './pages/repolist/repolist.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { SorterPipe } from './pipe/sorter.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     CardComponent,
     ListComponent,
     HomeComponent,
-    RepolistComponent
+    RepolistComponent,
+    SorterPipe
   ],
   imports: [
     BrowserModule,

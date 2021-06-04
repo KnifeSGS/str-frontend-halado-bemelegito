@@ -1,1 +1,25 @@
-<p>repolist works!</p>
+<div>
+  <h5>
+    Repositories List
+  </h5>
+  <div class="col-12">
+    <table class="table table-striped table-responsive">
+      <thead>
+        <tr>
+          <th (click)="onColumnSelect('name')">Name</th>
+          <th (click)="onColumnSelect('fork')">Forked</th>
+          <th (click)="onColumnSelect('stargazers_count')">Stars</th>
+          <th (click)="onColumnSelect('updated_at')">Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of repos$ | async | sorter:columnKey">
+          <td> {{ item.name }} </td>
+          <td> {{ item.fork }} </td>
+          <td> {{ item.stargazers_count }} </td>
+          <td> {{ item.updated_at }} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

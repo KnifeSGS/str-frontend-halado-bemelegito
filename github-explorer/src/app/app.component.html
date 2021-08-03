@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand navbar-light bg-light">
+    <div class="nav navbar-nav">
+        <a class="nav-item nav-link active" href="#">Contributors <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">Contributors</a>
+    </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let contributor of $list | async" class="col-12 col-md-6 col-lg-3">
+      <app-contributor-card [contributor]=contributor></app-contributor-card>
+    </div>
+  </div>
+</div>
